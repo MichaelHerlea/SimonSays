@@ -1,9 +1,9 @@
 import random
 
 sequenceList = []
-gameFail = False
+gameRun = True
 
-while gameFail == False:
+while gameRun == True:
     sequenceList.append(random.randint(0, 3))
     print(sequenceList)
 
@@ -14,6 +14,6 @@ while gameFail == False:
     if len(responseList) == len(sequenceList):
         for i in range(len(sequenceList)):
             if responseList[i] != sequenceList [i]:
-                gameFail = True
+                gameRun = False
     else:
-        gameFail = True
+        gameRun = False
