@@ -40,12 +40,14 @@ while True:
         userInputtedSequence = []
         gameSequence.append(random.randint(0, 3))
         print(gameSequence)
+        pygame.display.set_caption(f"Simon says (score: {len(gameSequence)-1})")
+
         for i in range(len(gameSequence)):
             if gameSequence[i] == 0:
                 draw()
                 pygame.draw.rect(window, "white", (0, 0, 400, 400))
                 pygame.display.update()
-                time.sleep(1)
+                time.sleep(0.5)
                 draw()
                 pygame.display.update()
                 time.sleep(0.5)
@@ -53,7 +55,7 @@ while True:
                 draw()
                 pygame.draw.rect(window, "white", (400, 0, 400, 400))
                 pygame.display.update()
-                time.sleep(1)
+                time.sleep(0.5)
                 draw()
                 pygame.display.update()
                 time.sleep(0.5)
@@ -61,7 +63,7 @@ while True:
                 draw()
                 pygame.draw.rect(window, "white", (0, 400, 400, 400))
                 pygame.display.update()
-                time.sleep(1)
+                time.sleep(0.5)
                 draw()
                 pygame.display.update()
                 time.sleep(0.5)
@@ -69,7 +71,7 @@ while True:
                 draw()
                 pygame.draw.rect(window, "white", (400, 400, 400, 400))
                 pygame.display.update()
-                time.sleep(1)
+                time.sleep(0.5)
                 draw()
                 pygame.display.update()
                 time.sleep(0.5)
