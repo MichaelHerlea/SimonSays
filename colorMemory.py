@@ -33,6 +33,7 @@ while True:
                 userInputtedSequence.append(3)
 
     if len(userInputtedSequence) == len(gameSequence):
+        print(userInputtedSequence)
         for i in range(len(gameSequence)):
             if userInputtedSequence[i] != gameSequence[i]:
                 pygame.quit()
@@ -45,7 +46,7 @@ while True:
         for i in range(len(gameSequence)):
             if gameSequence[i] == 0:
                 draw()
-                pygame.draw.rect(window, "white", (0, 0, 400, 400))
+                pygame.draw.rect(window, "darkgreen", (0, 0, 400, 400))
                 pygame.display.update()
                 time.sleep(0.5)
                 draw()
@@ -53,7 +54,7 @@ while True:
                 time.sleep(0.5)
             if gameSequence[i] == 1:
                 draw()
-                pygame.draw.rect(window, "white", (400, 0, 400, 400))
+                pygame.draw.rect(window, "darkred", (400, 0, 400, 400))
                 pygame.display.update()
                 time.sleep(0.5)
                 draw()
@@ -61,7 +62,7 @@ while True:
                 time.sleep(0.5)
             if gameSequence[i] == 2:
                 draw()
-                pygame.draw.rect(window, "white", (0, 400, 400, 400))
+                pygame.draw.rect(window, "gold", (0, 400, 400, 400))
                 pygame.display.update()
                 time.sleep(0.5)
                 draw()
@@ -69,12 +70,14 @@ while True:
                 time.sleep(0.5)
             if gameSequence[i] == 3:
                 draw()
-                pygame.draw.rect(window, "white", (400, 400, 400, 400))
+                pygame.draw.rect(window, "darkblue", (400, 400, 400, 400))
                 pygame.display.update()
                 time.sleep(0.5)
                 draw()
                 pygame.display.update()
                 time.sleep(0.5)
+            
+        pygame.event.clear()
 
     draw()
     pygame.display.update()
