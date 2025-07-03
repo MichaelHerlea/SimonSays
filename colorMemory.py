@@ -76,6 +76,10 @@ while True:
                 draw()
                 pygame.display.update()
                 time.sleep(0.5)
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    exit()
             
         pygame.event.clear()
 
